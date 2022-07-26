@@ -1,6 +1,11 @@
+import ddf.minim.*;
+import ddf.minim.analysis.*;
+import ddf.minim.effects.*;
+import ddf.minim.signals.*;
+import ddf.minim.spi.*;
+import ddf.minim.ugens.*;
+
 //Global Variables
-color defaultGrey= color(185, 185, 185, 255); //rgba
-color resetWhite=#FFFFFF;
 Boolean draw=false;
 //
 void setup()
@@ -22,7 +27,11 @@ void setup()
 void draw()
 {
   //ellipse( mouseX, mouseY, drawingDiameter, drawingDiameter); //Example Circle Drawing Tool
-  if ( draw == true && mouseX>drawingSurfaceX && mouseX<drawingSurfaceX+drawingSurfaceWidth && mouseY>drawingSurfaceY && mouseY<drawingSurfaceY+drawingSurfaceHeight) line (mouseX, mouseY, pmouseX, pmouseY);
+  if ( draw == true && mouseX>drawingSurfaceX && mouseX<drawingSurfaceX+drawingSurfaceWidth && mouseY>drawingSurfaceY && mouseY<drawingSurfaceY+drawingSurfaceHeight) {
+    line (mouseX, mouseY, pmouseX, pmouseY);
+    fill(defaultGrey);
+    rect( selectingSurfaceX, selectingSurfaceY, selectingSurfaceWidth, selectingSurfaceHeight );
+  }
 }//End draw
 //
 void keyPressed() {
