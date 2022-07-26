@@ -1,5 +1,6 @@
 //Global Variables
-float drawingSurfaceX, drawingSurfaceY, drawingSurfaceWidth, drawingSurfaceHeight, drawingDiameter;
+color defaultGrey= color(185, 185, 185, 255); //rgba
+color resetWhite=#FFFFFF;
 Boolean draw=false;
 //
 void setup()
@@ -7,15 +8,13 @@ void setup()
   //Display Checker
   //Display Orientation Checker
   //Display and CANVAS Checker
-  size(500, 600); //Landscape (Portrait or Square)
+  size(1200, 750); //Landscape (Portrait or Square)
   //
-  //Population
-  drawingSurfaceX = width*0;
-  drawingSurfaceY = height*0;
-  drawingSurfaceWidth = width*3/4;
-  drawingSurfaceHeight = height*4/5;
-  drawingDiameter = width*1/100;
+  populationVariables();
   //
+  fill(defaultGrey);
+  rect( selectingSurfaceX, selectingSurfaceY, selectingSurfaceWidth, selectingSurfaceHeight );
+  fill(resetWhite);
   rect( drawingSurfaceX, drawingSurfaceY, drawingSurfaceWidth, drawingSurfaceHeight );
   //
 }//End setup
