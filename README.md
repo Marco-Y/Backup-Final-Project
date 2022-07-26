@@ -1,6 +1,6 @@
 # New-Final-Project
 Old One Deleted, got bugs
-NOT USING THIS ONE
+NOT USING THIS ONE USING FINAL DRAWING MUSIC PROJECT
 
 To Do List
 - [x] Line drawing tool
